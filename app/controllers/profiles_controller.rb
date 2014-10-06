@@ -22,7 +22,7 @@ class ProfilesController < ApplicationController
  
   def create
     @profile = Profile.new(profile_params)
-    # ...
+    
 
     respond_to do |format|
       if @profile.save
