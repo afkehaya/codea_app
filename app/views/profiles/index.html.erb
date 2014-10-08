@@ -7,29 +7,29 @@
 
 <% @profiles.each do |profile| %>
   <div class= "row">
-    <div class="col-md-3 profile">
+    <div class="col-lg-3 profile">
       <p class= "profile-topic">Job</p>
       <%= profile.job_title %>
     </div>
-    <div class="col-md-3 profile">
-      <p class= "profile-topic">Hobbies</p>
+    <div class="col-lg-3 profile">
+      <p class= "profile-topic">Skills</p>
       <%= profile.skill %>
     </div>
-    <div class="col-md-3 profile">
-      <p class= "profile-topic">Skills</p>
+    <div class="col-lg-3 profile">
+      <p class= "profile-topic">Hobbies</p>
       <%= profile.hobbies %>
     </div>
-    <div class="col-md-3 profile">
+    <div class="col-lg-3 profile">
       <p class= "profile-topic">Food</p>
       <%= profile.food %>
     </div>
   </div>
 
 <div class="panel-footer">    
-      <tr>
-        <td><%= link_to 'Edit', edit_profile_path(profile), class: "btn btn-primary"  %></td>
-        <td><%= link_to 'Delete', profile, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning"  %></td>
-      </tr>
+      <div>
+        <%= link_to 'Edit', edit_profile_path(profile), class: "btn btn-primary"  %>
+        <%= link_to 'Delete', profile, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning"  %>
+      </div>
     <% end %>
   </div>
 </div>
